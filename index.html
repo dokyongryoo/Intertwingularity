@@ -45,6 +45,40 @@
         text-decoration: underline;
       }
 
+      @keyframes glow-animation {
+        0% {
+          text-shadow: 0 0 10px blue;
+        }
+
+        50% {
+          text-shadow: 0 0 20px blue;
+        }
+
+        100% {
+          text-shadow: 0 0 10px blue;
+        }
+      }
+
+      .blue-light {
+        color: blue;
+        animation: glow-animation 3s ease-in-out infinite;
+      }
+
+      .fade-in {
+        animation: fadeIn 3s ease-in-out forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
       .text-container {
         position: absolute;
         top: 50%;
@@ -57,9 +91,9 @@
   </head>
   <body>
     <div class="text-container">
-      <a href="https://liu-michelle.github.io/intertwingularity/">Blue light surrounds us</a>
+      <p><a href="https://liu-michelle.github.io/intertwingularity/"><span class="blue-light">Blue light</span> surrounds us</a></p>
       <p>Connected with each other</p>
-      <a href="https://marimonarca.github.io/Intertwingularity/">Wherever we go</a>
+      <a href="https://marimonarca.github.io/Intertwingularity/" class="fade-in">Wherever we go</a>
     </div>
   </body>
 </html>
